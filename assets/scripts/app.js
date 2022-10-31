@@ -8,6 +8,7 @@ let cont = 0
 
 btnStart.onclick = () => {
   contador()
+  btnStart.setAttribute('disabled', true)
 }
 
 btnRefresh.onclick = () => {
