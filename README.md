@@ -12,6 +12,6 @@ Desafio do semafóro feito com a linguagem JavaScript.
 
 
 ## 🎥 Screenshot:
+![screenshot](https://user-images.githubusercontent.com/80595156/200090632-ec7a18ed-8628-41be-962a-34835ce86994.gif)
 
-https://user-images.githubusercontent.com/80595156/200089936-c76f18ce-0139-4de7-a68b-98b335e3dae0.mp4
 
