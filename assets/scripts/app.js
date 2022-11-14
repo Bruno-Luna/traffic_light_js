@@ -30,11 +30,10 @@ const contador = () => {
 
 const condicaoTrocaDeImagem = () => {
   const sinalVermelho = counter >= 0 && counter <= 20
-  const sinalVerde = counter >= 20 && counter <= 52
+  const sinalVerde = counter > 20 && counter <= 52
   const attributeSrc = 'src'
   
   alterarImg(sinalVermelho, sinalVerde, attributeSrc)
-  
 }
 
 const alterarImg = (sinalVermelho, sinalVerde, attributeSrc) => {
@@ -51,7 +50,6 @@ const alterarImg = (sinalVermelho, sinalVerde, attributeSrc) => {
     imgTrafficLight.setAttribute(`${attributeSrc}`, 'assets/img/amarelo.png')
     containerCounterText.style.backgroundColor = '#f9a825'
   }
-
 }
 
 
