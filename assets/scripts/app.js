@@ -1,8 +1,8 @@
 const imgSemaforo = document.querySelector('img')
 const btnStart = document.querySelector('.start_btn')
 const btnRefresh = document.querySelector('.refresh_btn')
-const elementH4 = document.getElementById('demo');
-const card = document.querySelector('.card-panel');
+const elementH4 = document.getElementById('demo')
+const card = document.querySelector('.card-panel')
 
 let cont = 0
 
@@ -19,13 +19,13 @@ const contador = () => {
   setInterval(() => {
     if (cont <= 60) {
       elementH4.innerHTML = cont
-      cont = cont + 1;
+      cont = cont + 1
       condicaoTrocaDeImagem()
     }
     if (cont === 60)
       cont = 0
 
-  }, 1000);
+  }, 1000)
 }
 
 const condicaoTrocaDeImagem = () => {
