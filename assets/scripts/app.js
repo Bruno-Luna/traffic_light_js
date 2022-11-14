@@ -29,20 +29,16 @@ const startCounter = () => {
 }
 
 const changeImage = () => {
-  const sinalVermelho = counter >= 0 && counter <= 20
-  const sinalVerde = counter > 20 && counter <= 52
-  const attributeSrc = 'src'
-
-  if (sinalVermelho) {
-    imgTrafficLight.setAttribute(`${attributeSrc}`, 'assets/img/vermelho.png')
+  if (counter >= 0 && counter <= 20) {
+    imgTrafficLight.setAttribute('src', 'assets/img/vermelho.png')
     containerCounterText.style.backgroundColor = '#e53935'
   }
-  else if (sinalVerde) {
-    imgTrafficLight.setAttribute(`${attributeSrc}`, 'assets/img/verde.png')
+  else if (counter > 20 && counter <= 52) {
+    imgTrafficLight.setAttribute('src', 'assets/img/verde.png')
     containerCounterText.style.backgroundColor = '#4caf50'
   }
   else {
-    imgTrafficLight.setAttribute(`${attributeSrc}`, 'assets/img/amarelo.png')
+    imgTrafficLight.setAttribute('src', 'assets/img/amarelo.png')
     containerCounterText.style.backgroundColor = '#f9a825'
   }
 }
