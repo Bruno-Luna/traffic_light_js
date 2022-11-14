@@ -7,7 +7,7 @@ const containerCounterText = document.querySelector('.card-panel')
 let counter = 0
 
 btnStart.onclick = () => {
-  contador()
+  startCounter()
   btnStart.setAttribute('disabled', true)
 }
 
@@ -15,7 +15,7 @@ btnRefresh.onclick = () => {
   window.location.reload()
 }
 
-const contador = () => {
+const startCounter = () => {
   setInterval(() => {
     if (counter <= 60) {
       counterText.innerHTML = counter
