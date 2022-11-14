@@ -1,8 +1,8 @@
 const imgSemaforo = document.querySelector('img')
 const btnStart = document.querySelector('.start_btn')
 const btnRefresh = document.querySelector('.refresh_btn')
-const elementH4 = document.getElementById("demo");
-const card = document.querySelector(".card-panel");
+const elementH4 = document.getElementById('demo');
+const card = document.querySelector('.card-panel');
 
 let cont = 0
 
@@ -40,15 +40,15 @@ const condicaoTrocaDeImagem = () => {
 const alterarImg = (sinalVermelho, sinalVerde, attributeSrc) => {
 
   if (sinalVermelho) {
-    imgSemaforo.setAttribute(`${attributeSrc}`, "assets/img/vermelho.png")
+    imgSemaforo.setAttribute(`${attributeSrc}`, 'assets/img/vermelho.png')
     card.style.backgroundColor = '#e53935'
   }
   else if (sinalVerde) {
-    imgSemaforo.setAttribute(`${attributeSrc}`, "assets/img/verde.png")
+    imgSemaforo.setAttribute(`${attributeSrc}`, 'assets/img/verde.png')
     card.style.backgroundColor = '#4caf50'
   }
   else {
-    imgSemaforo.setAttribute(`${attributeSrc}`, "assets/img/amarelo.png")
+    imgSemaforo.setAttribute(`${attributeSrc}`, 'assets/img/amarelo.png')
     card.style.backgroundColor = '#f9a825'
   }
 
