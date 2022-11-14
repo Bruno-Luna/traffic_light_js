@@ -2,7 +2,7 @@ const imgTrafficLight = document.querySelector('img')
 const btnStart = document.querySelector('.start_btn')
 const btnRefresh = document.querySelector('.refresh_btn')
 const counterText = document.getElementById('demo')
-const card = document.querySelector('.card-panel')
+const containerCounterText = document.querySelector('.card-panel')
 
 let counter = 0
 
@@ -41,15 +41,15 @@ const alterarImg = (sinalVermelho, sinalVerde, attributeSrc) => {
 
   if (sinalVermelho) {
     imgTrafficLight.setAttribute(`${attributeSrc}`, 'assets/img/vermelho.png')
-    card.style.backgroundColor = '#e53935'
+    containerCounterText.style.backgroundColor = '#e53935'
   }
   else if (sinalVerde) {
     imgTrafficLight.setAttribute(`${attributeSrc}`, 'assets/img/verde.png')
-    card.style.backgroundColor = '#4caf50'
+    containerCounterText.style.backgroundColor = '#4caf50'
   }
   else {
     imgTrafficLight.setAttribute(`${attributeSrc}`, 'assets/img/amarelo.png')
-    card.style.backgroundColor = '#f9a825'
+    containerCounterText.style.backgroundColor = '#f9a825'
   }
 
 }
