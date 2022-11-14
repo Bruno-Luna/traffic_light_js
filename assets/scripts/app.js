@@ -20,7 +20,7 @@ const startCounter = () => {
     if (counter <= 60) {
       counterText.innerHTML = counter
       counter = counter + 1
-      condicaoTrocaDeImagem()
+      changeImage()
     }
     if (counter === 60)
     counter = 0
@@ -28,15 +28,10 @@ const startCounter = () => {
   }, 1000)
 }
 
-const condicaoTrocaDeImagem = () => {
+const changeImage = () => {
   const sinalVermelho = counter >= 0 && counter <= 20
   const sinalVerde = counter > 20 && counter <= 52
   const attributeSrc = 'src'
-  
-  alterarImg(sinalVermelho, sinalVerde, attributeSrc)
-}
-
-const alterarImg = (sinalVermelho, sinalVerde, attributeSrc) => {
 
   if (sinalVermelho) {
     imgTrafficLight.setAttribute(`${attributeSrc}`, 'assets/img/vermelho.png')
