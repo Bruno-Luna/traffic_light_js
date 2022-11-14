@@ -1,10 +1,10 @@
-const imgSemaforo = document.querySelector('img')
+const imgTrafficLight = document.querySelector('img')
 const btnStart = document.querySelector('.start_btn')
 const btnRefresh = document.querySelector('.refresh_btn')
-const elementH4 = document.getElementById('demo')
+const counterText = document.getElementById('demo')
 const card = document.querySelector('.card-panel')
 
-let cont = 0
+let counter = 0
 
 btnStart.onclick = () => {
   contador()
@@ -17,20 +17,20 @@ btnRefresh.onclick = () => {
 
 const contador = () => {
   setInterval(() => {
-    if (cont <= 60) {
-      elementH4.innerHTML = cont
-      cont = cont + 1
+    if (counter <= 60) {
+      counterText.innerHTML = counter
+      counter = counter + 1
       condicaoTrocaDeImagem()
     }
-    if (cont === 60)
-      cont = 0
+    if (counter === 60)
+    counter = 0
 
   }, 1000)
 }
 
 const condicaoTrocaDeImagem = () => {
-  const sinalVermelho = cont >= 0 && cont <= 20
-  const sinalVerde = cont >= 20 && cont <= 52
+  const sinalVermelho = counter >= 0 && counter <= 20
+  const sinalVerde = counter >= 20 && counter <= 52
   const attributeSrc = 'src'
   
   alterarImg(sinalVermelho, sinalVerde, attributeSrc)
@@ -40,15 +40,15 @@ const condicaoTrocaDeImagem = () => {
 const alterarImg = (sinalVermelho, sinalVerde, attributeSrc) => {
 
   if (sinalVermelho) {
-    imgSemaforo.setAttribute(`${attributeSrc}`, 'assets/img/vermelho.png')
+    imgTrafficLight.setAttribute(`${attributeSrc}`, 'assets/img/vermelho.png')
     card.style.backgroundColor = '#e53935'
   }
   else if (sinalVerde) {
-    imgSemaforo.setAttribute(`${attributeSrc}`, 'assets/img/verde.png')
+    imgTrafficLight.setAttribute(`${attributeSrc}`, 'assets/img/verde.png')
     card.style.backgroundColor = '#4caf50'
   }
   else {
-    imgSemaforo.setAttribute(`${attributeSrc}`, 'assets/img/amarelo.png')
+    imgTrafficLight.setAttribute(`${attributeSrc}`, 'assets/img/amarelo.png')
     card.style.backgroundColor = '#f9a825'
   }
 
