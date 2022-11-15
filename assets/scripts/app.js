@@ -4,7 +4,6 @@ const btnRefresh = document.querySelector('.refresh_btn')
 const counterText = document.getElementById('demo')
 const containerCounterText = document.querySelector('.card-panel')
 
-let counter = 0
 
 btnStart.onclick = () => {
   startCounter()
@@ -16,20 +15,20 @@ btnRefresh.onclick = () => {
 }
 
 const startCounter = () => {
+  let counter = 0
+
   setInterval(() => {
-    if (counter <= 60) {
-      counterText.innerHTML = counter
-      counter = counter + 1
-      changeImage()
-    }
     if (counter === 60){
       counter = 0
     }
+      counterText.innerHTML = counter
+      counter = counter + 1
+      changeImage(counter)
 
   }, 1000)
 }
 
-const changeImage = () => {
+const changeImage = (counter) => {
   if (counter >= 0 && counter <= 20) {
     imgTrafficLight.setAttribute('src', 'assets/img/vermelho.png')
     containerCounterText.style.backgroundColor = '#e53935'
