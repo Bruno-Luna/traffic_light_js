@@ -4,16 +4,6 @@ const btnRefresh = document.querySelector('.refresh_btn')
 const counterText = document.getElementById('demo')
 const containerCounterText = document.querySelector('.card-panel')
 
-
-btnStart.onclick = () => {
-  startCounter()
-  btnStart.setAttribute('disabled', true)
-}
-
-btnRefresh.onclick = () => {
-  window.location.reload()
-}
-
 const startCounter = () => {
   let counter = 0
 
@@ -24,9 +14,10 @@ const startCounter = () => {
       counterText.innerHTML = counter
       counter = counter + 1
       changeImage(counter)
-
-  }, 1000)
-}
+      
+    }, 1000)
+    btnStart.setAttribute('disabled', true)
+  }
 
 const changeImage = (counter) => {
   if (counter >= 0 && counter <= 20) {
@@ -43,5 +34,7 @@ const changeImage = (counter) => {
   }
 }
 
+const reloadPage = () => window.location.reload()
 
-
+btnStart.addEventListener('click', startCounter)
+btnRefresh.addEventListener('click', reloadPage)
