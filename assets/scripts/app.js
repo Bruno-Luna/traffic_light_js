@@ -22,8 +22,9 @@ const startCounter = () => {
       counter = counter + 1
       changeImage()
     }
-    if (counter === 60)
-    counter = 0
+    if (counter === 60){
+      counter = 0
+    }
 
   }, 1000)
 }
