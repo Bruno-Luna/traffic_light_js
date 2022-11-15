@@ -8,16 +8,16 @@ const startCounter = () => {
   let counter = 0
 
   setInterval(() => {
-    if (counter === 60){
+    if (counter === 60) {
       counter = 0
     }
-      counterText.innerHTML = counter
-      counter = counter + 1
-      changeImage(counter)
-      
-    }, 1000)
-    btnStart.setAttribute('disabled', true)
-  }
+    counterText.innerHTML = counter
+    counter = counter + 1
+    changeImage(counter)
+
+  }, 1000)
+  btnStart.setAttribute('disabled', true)
+}
 
 const changeImage = (counter) => {
   if (counter >= 0 && counter <= 20) {
